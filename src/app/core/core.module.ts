@@ -7,6 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [ToolbarComponent, SidenavComponent],
@@ -16,6 +17,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
+    AppRoutingModule,
   ],
   exports: [ToolbarComponent, SidenavComponent],
 })

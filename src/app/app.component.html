@@ -1,4 +1,4 @@
 <div class="content">
-    <app-toolbar></app-toolbar>
+    <app-toolbar *ngIf="storageService.getToken()"></app-toolbar>
     <app-sidenav></app-sidenav>
 </div>
