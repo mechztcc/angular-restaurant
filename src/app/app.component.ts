@@ -9,7 +9,7 @@ import { StorageService } from './core/shared/services/storage/storage.service';
 export class AppComponent {
   title = 'angular-restaurant';
 
+  isCollapsed: boolean = false;
+
   constructor(public storageService: StorageService) {}
-
-
 }
