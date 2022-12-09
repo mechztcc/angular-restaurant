@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { NgIconsModule } from '@ng-icons/core';
-import { octPerson, octMention, octEye, octEyeClosed } from '@ng-icons/octicons';
+import { octPerson, octMention, octEye, octEyeClosed, octCheck } from '@ng-icons/octicons';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { CreateAccountPageComponent } from './pages/create-account-page/create-account-page.component';
@@ -16,7 +16,7 @@ import { CardLoginComponent } from './components/card-login/card-login.component
     CommonModule,
     AuthRoutingModule,
 
-    NgIconsModule.withIcons({ octPerson, octMention, octEye, octEyeClosed }),
+    NgIconsModule.withIcons({ octPerson, octMention, octEye, octEyeClosed, octCheck }),
   ],
 })
 export class AuthModule {}
