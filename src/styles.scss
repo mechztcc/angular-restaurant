@@ -9,9 +9,28 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+small,
+label {
+  color: rgb(106, 104, 116);
+}
 
+.global-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
