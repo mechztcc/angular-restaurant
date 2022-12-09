@@ -29,6 +29,10 @@ label {
   min-height: 100vh;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
