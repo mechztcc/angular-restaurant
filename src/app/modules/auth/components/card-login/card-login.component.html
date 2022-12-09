@@ -1,56 +1,60 @@
 <div class="col-md-4 col-12 offset-md-4">
-    <div class="card shadow-lg p-4">
-      <div class="card-body">
+  <div class="card shadow-lg p-4">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4 col-4"></div>
+        <div class="col-md-8 col-8 text-end">
+          <span
+            >Dont have account?
+            <b class="text-primary pointer" routerLink="/auth/signin">Sign in</b></span
+          >
+        </div>
+      </div>
+      <h1 class="mt-5 text-center">Login to your account</h1>
+      <form>
         <div class="row">
-          <div class="col-md-4 col-4">
+          <div class="col-md-12 mt-3">
+            <label for="name">Email</label>
+            <div class="input-group mt-1">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  <ng-icon name="octMention" size="24"></ng-icon>
+                </span>
+              </div>
+              <input type="text" class="form-control" />
+            </div>
           </div>
-          <div class="col-md-8 col-8 text-end">
-            <span>Dont have account? <b class="text-primary pointer" routerLink="/auth/signin">Sign in</b></span>
+
+          <div class="col-md-12 mt-3">
+            <label for="name">Password</label>
+            <div class="input-group mt-1">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  <ng-icon name="octEyeClosed" size="24"></ng-icon>
+                </span>
+              </div>
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-6 mt-3">
+            <input type="radio" />
+            <small class="mx-2">Remeber me</small>
+          </div>
+          <div class="col-md-6 col-6 mt-3 text-end">
+            <span class="pointer">Forgot password?</span>
+          </div>
+          <div class="col-md-12 mt-4">
+            <button class="btn p-3 btn-primary w-100">Login</button>
           </div>
         </div>
-        <h1 class="mt-5 text-center">Login to your account</h1>
-        <form>
-          <div class="row">
-            <div class="col-md-12 mt-3">
-              <label for="name">Email</label>
-              <div class="input-group mt-1">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
-                    <ng-icon name="octMention" size="24"></ng-icon>
-                  </span>
-                </div>
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-  
-            <div class="col-md-12 mt-3">
-              <label for="name">Password</label>
-              <div class="input-group mt-1">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">
-                    <ng-icon name="octEyeClosed" size="24"></ng-icon>
-                  </span>
-                </div>
-                <input type="text" class="form-control" />
-              </div>
-            </div>
-            
-            <div class="col-md-6 col-6 mt-3">
-                <input type="radio">
-                <small class="mx-2">Remeber me</small>
-            </div>
-            <div class="col-md-6 col-6 mt-3 text-end">
-                <span class="pointer">Forgot password?</span>
-            </div>
-            <div class="col-md-12 mt-4">
-              <button class="btn p-3 btn-primary w-100">Login</button>
-            </div>
-          </div>
-        </form>
-        <div class="col-md-12 mt-3 text-center">
-          <span>By signing up you are agreeing to our <b class="text-primary">Terms and Conditions</b></span>
-        </div>
+      </form>
+      <div class="col-md-12 mt-3 text-center">
+        <span
+          >By signing up you are agreeing to our
+          <b class="text-primary">Terms and Conditions</b></span
+        >
       </div>
     </div>
   </div>
-  
+</div>
