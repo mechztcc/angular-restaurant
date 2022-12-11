@@ -32,7 +32,7 @@ export class CardCreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    this.toastrService.success('eaee', 'aeeee')
+    this.toastrService.error('eaee', 'aeeee')
   }
 
   initForm() {
