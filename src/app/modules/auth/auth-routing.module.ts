@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountPageComponent } from './pages/create-account-page/create-account-page.component';
 import { LoginAccountPageComponent } from './pages/login-account-page/login-account-page.component';

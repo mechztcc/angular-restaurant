@@ -45,10 +45,7 @@
             <span class="pointer">Forgot password?</span>
           </div>
           <div class="col-md-12 mt-4">
-            <button class="btn p-3 btn-primary w-100">
-              <ng-icon name="octCheck" size="24"></ng-icon>
-              Login
-            </button>
+            <app-primary-button [isLoading]="isLoading" [label]="'Log In'"></app-primary-button>
           </div>
         </div>
       </form>

@@ -1,24 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {
+  octCheck,
+  octEye,
+  octEyeClosed,
+  octKebabHorizontal,
+  octMention,
+  octPerson
+} from '@ng-icons/octicons';
+
+import { NgIconsModule } from '@ng-icons/core';
 import { AppRoutingModule } from '../app-routing.module';
+import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
 
 @NgModule({
-  declarations: [ToolbarComponent, SidenavComponent],
+  declarations: [PrimaryButtonComponent],
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    AppRoutingModule,
+    NgIconsModule.withIcons({
+      octPerson,
+      octMention,
+      octEye,
+      octEyeClosed,
+      octCheck,
+      octKebabHorizontal,
+    }),
   ],
-  exports: [ToolbarComponent, SidenavComponent],
+  exports: [PrimaryButtonComponent],
 })
 export class CoreModule {}

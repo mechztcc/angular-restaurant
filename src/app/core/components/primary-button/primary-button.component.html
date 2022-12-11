@@ -1,0 +1,5 @@
+<button class="btn p-3 btn-primary w-100" type="submit">
+  <ng-icon name="octCheck" size="24" *ngIf="!isLoading"></ng-icon>
+  <ng-icon name="octKebabHorizontal" size="24" *ngIf="isLoading"></ng-icon>
+  <ng-container *ngIf="!isLoading">{{ label }}</ng-container>
+</button>
