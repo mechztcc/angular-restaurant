@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { HttpInterceptorHandler } from './core/shared/interceptors/http/http.interceptor';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,6 +24,7 @@ import { HttpInterceptorHandler } from './core/shared/interceptors/http/http.int
     HttpClientModule,
     BsDatepickerModule.forRoot(),
     CollapseModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   providers: [
     {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { FormsService } from 'src/app/core/shared/services/forms/forms.service';
 import { UsersService } from 'src/app/modules/users/shared/services/users/users.service';
 import { IUsers } from 'src/app/modules/users/shared/types/users.interface';
@@ -25,11 +26,13 @@ export class CardCreateAccountComponent implements OnInit {
   constructor(
     private usersService: UsersService,
     private fb: FormBuilder,
-    public formsService: FormsService
+    public formsService: FormsService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
     this.initForm();
+    this.toastrService.success('eaee', 'aeeee')
   }
 
   initForm() {
