@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/modules/users/shared/services/users/users.service';
+import { IUsers } from 'src/app/modules/users/shared/types/users.interface';
 
 @Component({
   selector: 'app-card-create-account',
@@ -11,6 +12,8 @@ export class CardCreateAccountComponent implements OnInit {
   isLoading: boolean = false;
 
   form: FormGroup;
+
+  payload: IUsers;
 
   get formControls() {
     return this.form.controls;
@@ -31,5 +34,29 @@ export class CardCreateAccountComponent implements OnInit {
     });
   }
 
-  validateForm() {}
+  validateForm() {
+    if (!this.form.invalid) {
+      this.prepareToSubmit();
+      this.submit();
+    }
+  }
+
+  prepareToSubmit() {
+    this.payload = {
+      email: this.formControls['email'].value,
+      name: this.formControls['name'].value,
+      password: this.formControls['password'].value,
+      repeatPass: this.formControls['repeatPass'].value,
+    };
+  }
+
+  submit() {
+    this.isLoading = true;
+    this.usersService
+      .createAccount(this.payload)
+      .subscribe((data) => {
+        console.log(data);
+      })
+      .add(() => (this.isLoading = false));
+  }
 }
