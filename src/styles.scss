@@ -53,6 +53,11 @@ $theme-colors: (
   color: $light-color !important;
 }
 
+.error-form {
+  border: 1px solid $main-color;
+  border-radius: 0.375rem;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
