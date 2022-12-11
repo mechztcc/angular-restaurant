@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUsers } from '../../types/users.interface';
 
-const api = '/users';
+const api = 'users';
 
 @Injectable({
   providedIn: 'root',

@@ -53,7 +53,7 @@ export class CardCreateAccountComponent implements OnInit {
       email: this.formControls['email'].value,
       name: this.formControls['name'].value,
       password: this.formControls['password'].value,
-      repeatPass: this.formControls['repeatPass'].value,
+      role: 'ADMIN'
     };
   }
 

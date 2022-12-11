@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ILogin } from '../types/login.interface';
 
-const api = '/auth';
+const api = 'auth';
 
 @Injectable({
   providedIn: 'root',
