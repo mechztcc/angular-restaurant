@@ -16,6 +16,8 @@ export class CardCreateAccountComponent implements OnInit {
 
   payload: IUsers;
 
+  hidePass: boolean = false;
+
   get formControls() {
     return this.form.controls;
   }
@@ -65,4 +67,7 @@ export class CardCreateAccountComponent implements OnInit {
       .add(() => (this.isLoading = false));
   }
 
+  handlePassVisibility() {
+    this.hidePass = !this.hidePass;
+  }
 }

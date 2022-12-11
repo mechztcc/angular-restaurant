@@ -8,7 +8,7 @@ import {
   octEye,
   octEyeClosed,
   octCheck,
-  octKebabHorizontal
+  octKebabHorizontal,
 } from '@ng-icons/octicons';
 
 import { AuthRoutingModule } from './auth-routing.module';

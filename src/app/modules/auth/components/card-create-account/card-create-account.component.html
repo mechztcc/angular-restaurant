@@ -44,11 +44,11 @@
             <label for="name">Password</label>
             <div class="input-group mt-1" [class.error-form]="!formsService.checkField(formControls['password'])">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <ng-icon name="octEyeClosed" size="24"></ng-icon>
+                <span class="input-group-text" id="basic-addon1" (click)="handlePassVisibility()">
+                  <ng-icon [name]="hidePass ? 'octEye' : 'octEyeClosed'" size="24"></ng-icon>
                 </span>
               </div>
-              <input type="text" class="form-control" formControlName="password" />
+              <input [type]="hidePass ? 'text' : 'password'" class="form-control" formControlName="password" />
             </div>
           </div>
 
@@ -56,11 +56,11 @@
             <label for="name">Repeat Password</label>
             <div class="input-group mt-1" [class.error-form]="!formsService.checkField(formControls['repeatPass'])">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">
-                  <ng-icon name="octEyeClosed" size="24"></ng-icon>
+                <span class="input-group-text" id="basic-addon1" (click)="handlePassVisibility()">
+                  <ng-icon [name]="hidePass ? 'octEye' : 'octEyeClosed'" size="24"></ng-icon>
                 </span>
               </div>
-              <input type="text" class="form-control" formControlName="repeatPass" />
+              <input [type]="hidePass ? 'text' : 'password'" class="form-control" formControlName="repeatPass" />
             </div>
           </div>
 
