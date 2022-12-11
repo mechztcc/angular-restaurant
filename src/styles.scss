@@ -33,6 +33,26 @@ label {
   cursor: pointer;
 }
 
+$main-color: #f77f00;
+$secondary-color: #d62828;
+$thirdy-color: #003049;
+$light-color: #d6d3d9;
+
+$theme-colors: (
+  "light": $light-color,
+  "dark": $thirdy-color,
+  "primary": $main-color,
+  "secondary": $secondary-color,
+  "info": $thirdy-color,
+  "success": #049756,
+  "warning": #cf4137,
+  "danger": $secondary-color,
+);
+
+.btn {
+  color: $light-color !important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
