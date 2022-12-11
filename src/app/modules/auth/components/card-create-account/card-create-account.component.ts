@@ -32,7 +32,7 @@ export class CardCreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    this.toastrService.error('eaee', 'aeeee')
+    this.toastrService.error('eaee', 'aeeee');
   }
 
   initForm() {
@@ -56,7 +56,7 @@ export class CardCreateAccountComponent implements OnInit {
       email: this.formControls['email'].value,
       name: this.formControls['name'].value,
       password: this.formControls['password'].value,
-      role: 'ADMIN'
+      role: 'ADMIN',
     };
   }
 
@@ -65,9 +65,13 @@ export class CardCreateAccountComponent implements OnInit {
     this.usersService
       .createAccount(this.payload)
       .subscribe((data) => {
-        console.log(data);
+        scrollTo(0, 0);
+        this.toastrService.success('Sucesso!', 'Usuário criado com sucesso!');
       })
-      .add(() => (this.isLoading = false));
+      .add(() => {
+        this.isLoading = false;
+        this.form.reset();
+      });
   }
 
   handlePassVisibility() {
