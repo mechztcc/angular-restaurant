@@ -8,10 +8,11 @@ import {
 } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable()
 export class HttpInterceptorHandler implements HttpInterceptor {
-  constructor() {}
+  constructor(private toastrService: ToastrService) {}
 
   intercept(
     request: HttpRequest<unknown>,
@@ -26,6 +27,9 @@ export class HttpInterceptorHandler implements HttpInterceptor {
         return event;
       }),
       catchError((response: HttpErrorResponse) => {
+        const error = response.error;
+        this.toastrService.error(error.message, 'Error');
+
         return throwError(() => new Error());
       })
     );

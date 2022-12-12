@@ -14,4 +14,13 @@ export class StorageService {
       return false;
     }
   }
+
+  getItem(value: string): string {
+    const item = localStorage.getItem(value);
+    return item;
+  }
+
+  saveItem(name: string, value: string): void {
+    localStorage.setItem(name, value);
+  }
 }
