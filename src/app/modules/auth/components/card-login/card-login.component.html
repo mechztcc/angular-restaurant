@@ -45,7 +45,7 @@
             <span class="pointer">Forgot password?</span>
           </div>
           <div class="col-md-12 mt-4">
-            <app-primary-button [isLoading]="isLoading" [label]="'Log In'"></app-primary-button>
+            <app-primary-button [isLoading]="isLoading" [label]="'Log In'" [disabled]="!formsService.checkForm(form)"></app-primary-button>
           </div>
         </div>
       </form>
