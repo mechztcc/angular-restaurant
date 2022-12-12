@@ -7,15 +7,19 @@ import {
   octEyeClosed,
   octKebabHorizontal,
   octMention,
-  octPerson
+  octPerson,
+  octFeedTag,
+  octThreeBars,
+  octBellFill
 } from '@ng-icons/octicons';
 
 import { NgIconsModule } from '@ng-icons/core';
 import { AppRoutingModule } from '../app-routing.module';
 import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [PrimaryButtonComponent],
+  declarations: [PrimaryButtonComponent, NavbarComponent],
   imports: [
     CommonModule,
     NgIconsModule.withIcons({
@@ -25,8 +29,11 @@ import { PrimaryButtonComponent } from './components/primary-button/primary-butt
       octEyeClosed,
       octCheck,
       octKebabHorizontal,
+      octFeedTag,
+      octThreeBars,
+      octBellFill
     }),
   ],
-  exports: [PrimaryButtonComponent],
+  exports: [PrimaryButtonComponent, NavbarComponent],
 })
 export class CoreModule {}
