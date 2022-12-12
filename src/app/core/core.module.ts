@@ -2,24 +2,31 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import {
+  octBellFill,
   octCheck,
   octEye,
   octEyeClosed,
+  octFeedTag,
   octKebabHorizontal,
   octMention,
+  octPackage,
   octPerson,
-  octFeedTag,
+  octPersonFill,
+  octSignOut,
   octThreeBars,
-  octBellFill
+  octTools,
+  octChecklist,
+  octIdBadge,
+  octHeart
 } from '@ng-icons/octicons';
 
 import { NgIconsModule } from '@ng-icons/core';
-import { AppRoutingModule } from '../app-routing.module';
-import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [PrimaryButtonComponent, NavbarComponent],
+  declarations: [PrimaryButtonComponent, NavbarComponent, SidebarComponent],
   imports: [
     CommonModule,
     NgIconsModule.withIcons({
@@ -31,9 +38,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
       octKebabHorizontal,
       octFeedTag,
       octThreeBars,
-      octBellFill
+      octBellFill,
+      octPackage,
+      octSignOut,
+      octTools,
+      octPersonFill,
+      octChecklist,
+      octIdBadge,
+      octHeart
     }),
   ],
-  exports: [PrimaryButtonComponent, NavbarComponent],
+  exports: [PrimaryButtonComponent, NavbarComponent, SidebarComponent],
 })
 export class CoreModule {}

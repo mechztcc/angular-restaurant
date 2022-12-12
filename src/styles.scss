@@ -27,6 +27,7 @@ label {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin-left: 200px;
 }
 
 .pointer {
@@ -48,6 +49,10 @@ $theme-colors: (
   "warning": #cf4137,
   "danger": $secondary-color,
 );
+
+.w-200px {
+  width: 200px;
+}
 
 .btn {
   color: $light-color !important;
