@@ -1,6 +1,10 @@
 <div class="p-3 sidebar bg-info shadow-lg"  [class.d-none]="!sidenavService.closed">
     <div class="d-flex flex-column aling-items-center justify-content-center mt-3">
-        <button class="btn btn-md btn-info d-flex p-3">
+        <button class="btn btn-md btn-info d-flex p-3" routerLink="/">
+            <ng-icon class="mx-1" name="octHome" size="20"></ng-icon>
+            Home
+        </button>
+        <button class="btn btn-md btn-info d-flex p-3" routerLink="/restaurants">
             <ng-icon class="mx-1" name="octPackage" size="20"></ng-icon>
             Restaurantes
         </button>

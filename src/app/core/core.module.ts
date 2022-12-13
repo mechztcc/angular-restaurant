@@ -18,6 +18,7 @@ import {
   octSignOut,
   octThreeBars,
   octTools,
+  octHome,
 } from '@ng-icons/octicons';
 
 import { RouterModule } from '@angular/router';
@@ -44,6 +45,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
       octPackage,
       octSignOut,
       octTools,
+      octHome,
       octPersonFill,
       octChecklist,
       octIdBadge,

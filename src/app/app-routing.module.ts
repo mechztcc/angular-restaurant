@@ -8,6 +8,13 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'restaurants',
+    loadChildren: () =>
+      import('./modules/restaurants/restaurants.module').then(
+        (m) => m.RestaurantsModule
+      ),
+  },
+  {
     path: '',
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),

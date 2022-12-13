@@ -37,10 +37,13 @@ label {
 .global-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   min-height: 100vh;
   margin-left: 200px;
+  top: 66px;
+  position: fixed;
+ 
 }
 
 .pointer {
