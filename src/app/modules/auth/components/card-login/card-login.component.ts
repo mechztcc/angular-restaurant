@@ -70,8 +70,10 @@ export class CardLoginComponent implements OnInit {
     this.authService
       .login(this.payload)
       .subscribe((data) => {
-        this.storageService.saveItem('token', data.token);
+        this.storageService.saveItem('token', `Bearer ${data.token}`);
         this.toastrService.success('Login realizado com sucesso!', 'Sucesso!');
+        console.log(data);
+        
         this.router.navigate(['']);
       })
       .add(() => {
