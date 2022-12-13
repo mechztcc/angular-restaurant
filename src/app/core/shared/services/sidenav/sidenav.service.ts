@@ -1,14 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SidenavService {
-  isClosed: boolean = true;
+export class SidenavService implements OnInit {
+  closed: boolean = false;
 
   constructor() {}
 
+  ngOnInit(): void {}
+
   handleDrawer() {
-    this.isClosed = !this.isClosed;
+    this.closed = !this.closed;
   }
 }
