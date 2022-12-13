@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class StorageService {
   constructor() {}
 
-  getToken() {
+  hasToken() {
     const token = localStorage.getItem('token');
     if (token) {
       return true;
@@ -22,5 +22,9 @@ export class StorageService {
 
   saveItem(name: string, value: string): void {
     localStorage.setItem(name, value);
+  }
+
+  clearStorage(): void {
+    localStorage.clear();
   }
 }

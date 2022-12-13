@@ -1,5 +1,5 @@
-<app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
+<app-navbar *ngIf="storageService.hasToken()"></app-navbar>
+<app-sidebar *ngIf="storageService.hasToken()"></app-sidebar>
 <div class="global-wrapper">
   <div class="container">
     <router-outlet></router-outlet>

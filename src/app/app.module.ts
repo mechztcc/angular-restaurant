@@ -12,11 +12,13 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { HttpInterceptorHandler } from './core/shared/interceptors/http/http.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     BrowserAnimationsModule,
     CoreModule,
     ReactiveFormsModule,

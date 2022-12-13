@@ -4,9 +4,12 @@ import { NgModule } from '@angular/core';
 import {
   octBellFill,
   octCheck,
+  octChecklist,
   octEye,
   octEyeClosed,
   octFeedTag,
+  octHeart,
+  octIdBadge,
   octKebabHorizontal,
   octMention,
   octPackage,
@@ -15,11 +18,9 @@ import {
   octSignOut,
   octThreeBars,
   octTools,
-  octChecklist,
-  octIdBadge,
-  octHeart
 } from '@ng-icons/octicons';
 
+import { RouterModule } from '@angular/router';
 import { NgIconsModule } from '@ng-icons/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
@@ -29,6 +30,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   declarations: [PrimaryButtonComponent, NavbarComponent, SidebarComponent],
   imports: [
     CommonModule,
+    RouterModule,
     NgIconsModule.withIcons({
       octPerson,
       octMention,
@@ -45,7 +47,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
       octPersonFill,
       octChecklist,
       octIdBadge,
-      octHeart
+      octHeart,
     }),
   ],
   exports: [PrimaryButtonComponent, NavbarComponent, SidebarComponent],

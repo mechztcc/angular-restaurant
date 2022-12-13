@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/core/shared/services/storage/storage.service';
 @Component({
   selector: 'app-create-account-page',
   templateUrl: './create-account-page.component.html',
@@ -7,5 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CreateAccountPageComponent implements OnInit {
   isCollapsed = false;
 
-  ngOnInit(): void {}
+  constructor(private storageService: StorageService) {}
+
+  ngOnInit(): void {
+    this.storageService.clearStorage();
+  }
 }

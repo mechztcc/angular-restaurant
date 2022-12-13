@@ -4,7 +4,7 @@ import { Injectable, OnInit } from '@angular/core';
   providedIn: 'root',
 })
 export class SidenavService implements OnInit {
-  closed: boolean = false;
+  closed: boolean = true;
 
   constructor() {}
 

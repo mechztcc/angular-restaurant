@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FormsService } from 'src/app/core/shared/services/forms/forms.service';
 import { StorageService } from 'src/app/core/shared/services/storage/storage.service';
@@ -28,7 +29,8 @@ export class CardLoginComponent implements OnInit {
     public formsService: FormsService,
     private authService: AuthService,
     private storageService: StorageService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -69,7 +71,8 @@ export class CardLoginComponent implements OnInit {
       .login(this.payload)
       .subscribe((data) => {
         this.storageService.saveItem('token', data.token);
-        this.toastrService.success('Login realizado com sucesso!', 'Sucesso!')
+        this.toastrService.success('Login realizado com sucesso!', 'Sucesso!');
+        this.router.navigate(['']);
       })
       .add(() => {
         this.isLoading = false;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FormsService } from 'src/app/core/shared/services/forms/forms.service';
 import { UsersService } from 'src/app/modules/users/shared/services/users/users.service';
@@ -27,7 +28,8 @@ export class CardCreateAccountComponent implements OnInit {
     private usersService: UsersService,
     private fb: FormBuilder,
     public formsService: FormsService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -66,6 +68,7 @@ export class CardCreateAccountComponent implements OnInit {
       .subscribe((data) => {
         scrollTo(0, 0);
         this.toastrService.success('Sucesso!', 'Usuário criado com sucesso!');
+        this.router.navigate(['/auth/login']);
       })
       .add(() => {
         this.isLoading = false;
