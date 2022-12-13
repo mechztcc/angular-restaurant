@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+$main-color: #f77f00;
+$secondary-color: #d62828;
+$thirdy-color: #003049;
+$light-color: #d6d3d9;
+
 html,
 body {
   height: 100%;
@@ -25,6 +30,9 @@ label {
 .d-none {
   display: none;
 }
+.card:hover {
+  border-top: 2px solid $main-color !important;
+}
 
 .global-wrapper {
   display: flex;
@@ -38,11 +46,6 @@ label {
 .pointer {
   cursor: pointer;
 }
-
-$main-color: #f77f00;
-$secondary-color: #d62828;
-$thirdy-color: #003049;
-$light-color: #d6d3d9;
 
 $theme-colors: (
   "light": $light-color,
